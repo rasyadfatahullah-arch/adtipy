@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#121212" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <title>ADTIFY — by jiyyad tools</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Circular+Std:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- SIDEBAR (desktop) -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.19 14.39c-.17.27-.48.38-.76.26-2.09-1.28-4.72-1.57-7.82-.86-.3.07-.61-.12-.68-.42-.07-.3.12-.61.42-.68 3.4-.78 6.3-.44 8.65.99.28.17.37.52.19.71zm1.1-2.45c-.21.33-.59.44-.92.26-2.39-1.47-6.04-1.9-8.86-1.04-.36.11-.74-.09-.85-.44-.11-.36.09-.74.44-.85 3.22-.98 7.22-.5 9.97 1.18.33.2.44.62.22.89zm.1-2.55C14.05 9.3 8.3 9.1 5.6 9.92c-.43.13-.88-.13-1.01-.56-.13-.43.13-.88.56-1.01 3.11-.95 9.31-.72 13.01 1.52.4.23.53.75.3 1.14-.23.4-.75.53-1.14.3z"/></svg>
+        </div>
+        <span class="brand-name">ADTIFY</span>
+      </div>
+      <nav class="side-nav">
+        <button class="nav-btn active" data-page="home">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 1.515a3 3 0 00-3 0L3 5.845a2 2 0 00-1 1.732V21a1 1 0 001 1h6a1 1 0 001-1v-6h4v6a1 1 0 001 1h6a1 1 0 001-1V7.577a2 2 0 00-1-1.732l-7.5-4.33z"/></svg>
+          Beranda
+        </button>
+        <button class="nav-btn" data-page="search">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 101.414-1.414l-4.344-4.344a9.157 9.157 0 002.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"/></svg>
+          Cari
+        </button>
+        <button class="nav-btn" data-page="library">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.5 2.134a1 1 0 011 0l6 3.464a1 1 0 01.5.866V21a1 1 0 01-1.5.866L15 19.268V22a1 1 0 01-1 1H3a1 1 0 01-1-1V4a1 1 0 011-1h10.5V2.134zM15 17.732l5 2.887V7.33l-5-2.887v13.29zM4 5v16h9V5H4z"/></svg>
+          Koleksi
+        </button>
+        <button class="nav-btn" data-page="playlists">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3h15v2H6V3zm0 6h15v2H6V9zm0 6h15v2H6v-2zM3 3h1.5v2H3V3zm0 6h1.5v2H3V9zm0 6h1.5v2H3v-2z"/></svg>
+          Playlist
+        </button>
+      </nav>
+      <div class="side-footer">
+        <p class="owner">by <strong>jiyyad tools</strong></p>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main" id="main">
+      <!-- HOME -->
+      <section class="page active" id="page-home">
+        <header class="topbar">
+          <h1 class="greeting" id="greeting">Selamat datang</h1>
+          <div class="topbar-actions">
+            <button class="icon-btn" id="btn-open-np" title="Now Playing">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+            </button>
+          </div>
+        </header>
+        <div class="section-block">
+          <div class="section-head">
+            <h2>Rekomendasi untukmu</h2>
+            <div class="slot-pills">
+              <button class="pill active" data-slot="pagi">Pagi</button>
+              <button class="pill" data-slot="siang">Siang</button>
+              <button class="pill" data-slot="sore">Sore</button>
+              <button class="pill" data-slot="malam">Malam</button>
+            </div>
+          </div>
+          <div class="card-row" id="feed-row">
+            <div class="skeleton-row"></div>
+          </div>
+        </div>
+        <div class="section-block">
+          <div class="section-head"><h2>Artis populer</h2></div>
+          <div class="chip-row" id="artists-row"></div>
+        </div>
+        <div class="section-block">
+          <div class="section-head"><h2>Genre & Mood</h2></div>
+          <div class="genre-grid" id="genres-row"></div>
+        </div>
+      </section>
+
+      <!-- SEARCH -->
+      <section class="page" id="page-search">
+        <header class="topbar">
+          <div class="search-wrap">
+            <svg class="search-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 101.414-1.414l-4.344-4.344a9.157 9.157 0 002.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"/></svg>
+            <input type="search" id="search-input" placeholder="Apa yang ingin kamu dengarkan?" autocomplete="off" />
+          </div>
+        </header>
+        <div id="search-results" class="track-list">
+          <div class="empty-hint">
+            <svg viewBox="0 0 24 24" fill="currentColor" opacity="0.4"><path d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 101.414-1.414l-4.344-4.344a9.157 9.157 0 002.077-5.816c0-5.14-4.226-9.28-9.407-9.28z"/></svg>
+            <p>Cari lagu, artis, atau album</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LIBRARY / FAVORITES -->
+      <section class="page" id="page-library">
+        <header class="topbar"><h1>Koleksi kamu</h1></header>
+        <div class="lib-tabs">
+          <button class="lib-tab active" data-lib="favs">Favorit</button>
+          <button class="lib-tab" data-lib="recent">Baru diputar</button>
+        </div>
+        <div id="library-list" class="track-list"></div>
+      </section>
+
+      <!-- PLAYLISTS (public) -->
+      <section class="page" id="page-playlists">
+        <header class="topbar"><h1>Playlist publik</h1></header>
+        <p class="page-sub">Playlist yang bisa dilihat semua orang</p>
+        <div class="playlist-grid" id="playlist-grid"></div>
+        <div id="playlist-tracks" class="track-list" style="display:none"></div>
+      </section>
+    </main>
+
+    <!-- MINI PLAYER (bar bawah) -->
+    <div class="mini-player" id="mini-player">
+      <div class="mini-progress"><div class="mini-fill" id="mini-fill"></div></div>
+      <div class="mini-body" id="mini-body">
+        <img class="mini-art" id="mini-art" src="" alt="" />
+        <div class="mini-meta">
+          <div class="mini-title" id="mini-title">Pilih lagu</div>
+          <div class="mini-artist" id="mini-artist">—</div>
+        </div>
+        <button class="mini-btn" id="mini-fav" title="Favorit">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </button>
+        <button class="mini-btn play" id="mini-play">
+          <svg class="ic-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          <svg class="ic-pause" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- NOW PLAYING FULLSCREEN (seperti screenshot) -->
+    <div class="now-playing" id="now-playing">
+      <div class="np-bg" id="np-bg"></div>
+      <div class="np-content">
+        <header class="np-header">
+          <button class="np-chevron" id="np-close" aria-label="Tutup">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+          </button>
+          <div class="np-header-text">
+            <span class="np-label">NOW PLAYING</span>
+            <span class="np-from" id="np-from">ADTIFY</span>
+          </div>
+          <button class="np-more" id="np-menu">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
+          </button>
+        </header>
+
+        <div class="np-art-wrap">
+          <img class="np-art" id="np-art" src="" alt="" />
+        </div>
+
+        <div class="np-info">
+          <div class="np-title-row">
+            <div>
+              <h2 class="np-title" id="np-title">—</h2>
+              <p class="np-artist" id="np-artist">—</p>
+            </div>
+            <button class="np-heart" id="np-fav">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="np-progress-area">
+          <div class="np-bar" id="np-bar">
+            <div class="np-bar-fill" id="np-bar-fill"></div>
+            <div class="np-bar-knob" id="np-bar-knob"></div>
+          </div>
+          <div class="np-times">
+            <span id="np-cur">0:00</span>
+            <span class="np-badge">ADTIFY</span>
+            <span id="np-dur">0:00</span>
+          </div>
+        </div>
+
+        <div class="np-controls">
+          <button class="np-ctrl" id="np-shuffle" title="Shuffle">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/></svg>
+          </button>
+          <button class="np-ctrl lg" id="np-prev">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+          </button>
+          <button class="np-ctrl play" id="np-play">
+            <svg class="ic-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            <svg class="ic-pause" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+          </button>
+          <button class="np-ctrl lg" id="np-next">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+          </button>
+          <button class="np-ctrl" id="np-repeat" title="Repeat">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/></svg>
+          </button>
+        </div>
+
+        <div class="np-extra">
+          <button class="np-extra-btn" id="np-lyrics">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+            Lirik
+          </button>
+          <button class="np-extra-btn" id="np-download">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+            Download
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- LYRICS SHEET -->
+    <div class="lyrics-sheet" id="lyrics-sheet">
+      <div class="ls-header">
+        <button id="ls-close">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+        </button>
+        <span>Lirik</span>
+        <span></span>
+      </div>
+      <div class="ls-body" id="ls-body">
+        <div class="ls-loading">Memuat lirik...</div>
+      </div>
+    </div>
+
+    <!-- MOBILE NAV -->
+    <nav class="mob-nav">
+      <button class="mob-nav-btn active" data-page="home">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 1.515a3 3 0 00-3 0L3 5.845a2 2 0 00-1 1.732V21a1 1 0 001 1h6a1 1 0 001-1v-6h4v6a1 1 0 001 1h6a1 1 0 001-1V7.577a2 2 0 00-1-1.732l-7.5-4.33z"/></svg>
+        <span>Home</span>
+      </button>
+      <button class="mob-nav-btn" data-page="search">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 101.414-1.414l-4.344-4.344a9.157 9.157 0 002.077-5.816c0-5.14-4.226-9.28-9.407-9.28z"/></svg>
+        <span>Cari</span>
+      </button>
+      <button class="mob-nav-btn" data-page="library">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.5 2.134a1 1 0 011 0l6 3.464a1 1 0 01.5.866V21a1 1 0 01-1.5.866L15 19.268V22a1 1 0 01-1 1H3a1 1 0 01-1-1V4a1 1 0 011-1h10.5V2.134z"/></svg>
+        <span>Koleksi</span>
+      </button>
+      <button class="mob-nav-btn" data-page="playlists">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3h15v2H6V3zm0 6h15v2H6V9zm0 6h15v2H6v-2z"/></svg>
+        <span>Playlist</span>
+      </button>
+    </nav>
+
+    <div class="toast" id="toast"></div>
+  </div>
+
+  <audio id="audio-el" preload="auto" playsinline></audio>
+  <div id="yt-host" style="position:fixed;width:1px;height:1px;opacity:0;pointer-events:none;bottom:0;left:0;overflow:hidden"></div>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="app.js"></script>
+</body>
+</html>
